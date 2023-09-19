@@ -1,10 +1,15 @@
 import '@/app/styles/App.scss'
+import { AppRouter } from '@/app/providers/RouterProvider'
+import { NavLink } from 'react-router-dom'
 
 export const App = () => {
     return (
         <div className="App">
-            <h1>HELLO WORLD!</h1>
-            <p>Who are you?</p>
+            <header>
+                <NavLink to="/">Каталог</NavLink>
+                <NavLink to="/basket">Корзина</NavLink>
+            </header>
+            <AppRouter />
         </div>
     )
 }
