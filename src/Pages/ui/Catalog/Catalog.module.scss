@@ -1,0 +1,12 @@
+.Catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: auto;
+}
+
+@media screen and (max-width: 670px) {
+    .Catalog {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

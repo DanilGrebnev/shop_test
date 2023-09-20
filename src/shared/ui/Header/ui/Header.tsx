@@ -8,7 +8,7 @@ export const Header = () => {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar
                 position="static"
-                sx={{ borderRadius: '10px' }}
+                sx={{ borderRadius: '4px' }}
             >
                 <Toolbar>
                     <Button

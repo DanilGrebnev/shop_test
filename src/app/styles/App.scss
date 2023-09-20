@@ -1,3 +1,11 @@
 .app {
-    padding: 20px;
+    padding: 10px;
+    display: grid;
+    height: 100dvh;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+}
+
+.page__wrapper {
+    overflow: auto;
 }

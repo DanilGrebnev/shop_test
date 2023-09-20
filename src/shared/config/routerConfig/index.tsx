@@ -15,7 +15,7 @@ export const RoutePath: Record<AppRoutes, string> = {
 }
 
 export const routerConfig: RouteProps[] = [
-    { path: RoutePath.catalog, element: <Catalog  /> },
+    { path: RoutePath.catalog, element: <Catalog /> },
     { path: RoutePath.basket, element: <Basket /> },
     { path: RoutePath.not_found, element: <NotFound /> },
 ]

@@ -1,44 +1,31 @@
-import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
-import CardContent from '@mui/material/CardContent'
-import CardMedia from '@mui/material/CardMedia'
-import Typography from '@mui/material/Typography'
+import { FC } from 'react'
+import { Card } from '@mui/material/'
 
 import { Button } from '@/shared/ui/Button'
 
-export const ProductCard = () => {
+import s from './ProductCard.module.scss'
+interface ProductCardProps {
+    id: number
+    image: string
+    name: string
+    price: number
+}
+
+export const ProductCard: FC<ProductCardProps> = (props) => {
+    const { id, image, name, price } = props
+
     return (
-        <Card sx={{ maxWidth: 345 }}>
-            <CardMedia
-                sx={{ height: 140 }}
-                image="/static/images/cards/contemplative-reptile.jpg"
-                title="green iguana"
+        <Card className={s.Card}>
+            <img
+                src={image}
+                className={s.img}
             />
-            <CardContent>
-                <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                >
-                    Lizard
-                </Typography>
-                <Typography
-                    variant="body2"
-                    color="text.secondary"
-                >
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
-                </Typography>
-            </CardContent>
-            <CardActions>
-                <Button
-                    size="small"
-                    variant="text"
-                >
-                    Добавить в корзину
-                </Button>
-            </CardActions>
+            <h3>{name}</h3>
+            <h4>Цена: {price}</h4>
+            <div className={s.buttons}>
+                <Button variant="outlined">Добавить в корзину</Button>
+                <Button variant="outlined">Подробнее</Button>
+            </div>
         </Card>
     )
 }

@@ -1,0 +1,31 @@
+.Card {
+    font-family: roboto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h3 {
+        text-align: center;
+    }
+}
+
+.img {
+    object-fit: contain;
+    width: 100%;
+    max-height: 150px;
+    height: 100%;
+    object-position: center;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-grow: 1;
+    align-items: end;
+
+    button {
+        height: fit-content;
+    }
+}

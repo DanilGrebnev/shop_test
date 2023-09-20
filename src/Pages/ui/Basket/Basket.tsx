@@ -8,8 +8,10 @@ interface BasketProps {
     className?: string
 }
 
-export const Basket: FC<BasketProps> = (props) => {
+const Basket: FC<BasketProps> = (props) => {
     const { className } = props
 
     return <div className={cn(s.Catalog, className)}>Basket</div>
 }
+
+export default Basket

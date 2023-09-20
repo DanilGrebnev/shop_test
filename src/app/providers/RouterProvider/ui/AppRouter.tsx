@@ -13,7 +13,9 @@ export const AppRouter = () => {
                         <Route
                             key={v4()}
                             path={path}
-                            element={element}
+                            element={
+                                <div className="page__wrapper">{element}</div>
+                            }
                         />
                     )
                 })}
