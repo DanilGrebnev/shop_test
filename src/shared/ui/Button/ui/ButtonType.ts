@@ -3,10 +3,13 @@ import { CSSProperties } from 'react'
 export interface ButtonProps {
     className?: string
     children?: React.ReactNode
-    to: string
+    to?: string
     types?: ButtonType
     badgeContent?: number
     style?: CSSProperties
+    color?: string
+    size?: 'large' | 'medium' | 'small'
+    variant?: 'contained' | 'outlined' | 'text'
     onClick?: () => void
 }
 

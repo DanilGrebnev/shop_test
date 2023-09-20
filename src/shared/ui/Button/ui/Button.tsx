@@ -23,27 +23,24 @@ export const Button: FC<ButtonProps> = memo((props) => {
     const {
         to,
         children,
-        types = ButtonType.DEFAULT,
         style,
         badgeContent,
         className,
+        color,
+        variant = 'outlined',
+        types = ButtonType.DEFAULT,
         ...otherProps
     } = props
 
     const LinkWrapper: FC<LinkWrapperProps> = (LinkProps) => {
-        return (
-            <NavLink
-                to={to}
-                style={style}
-            >
-                {LinkProps.children}
-            </NavLink>
-        )
+        return <NavLink to={to || ''}>{LinkProps.children}</NavLink>
     }
 
     const DefaultButton = (
         <ButtonMUI
             {...otherProps}
+            variant={variant}
+            style={{ color, ...style }}
             className={cn(s.Button, className)}
         >
             <StyledBadge

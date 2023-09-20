@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
 import cn from '@/shared/lib/classnames'
+import { ProductCard } from '@/widgets'
 
 import s from './Catalog.module.scss'
 
@@ -11,5 +12,9 @@ interface CatalogProps {
 export const Catalog: FC<CatalogProps> = (props) => {
     const { className } = props
 
-    return <div className={cn(s.Catalog, className)}>Catalog</div>
+    return (
+        <div className={cn(s.Catalog, className)}>
+            <ProductCard />
+        </div>
+    )
 }

@@ -1,6 +1,7 @@
+// import { useState } from 'react'
 import { AppBar, Box, Toolbar } from '@mui/material'
 
-import { Button, ButtonType } from '@/shared/ui/Link'
+import { Button, ButtonType } from '@/shared/ui/Button'
 
 export const Header = () => {
     return (
@@ -12,12 +13,16 @@ export const Header = () => {
                 <Toolbar>
                     <Button
                         to="/"
+                        color="white"
+                        variant="text"
                         types={ButtonType.BUTTON_LINK}
                     >
                         Каталог
                     </Button>
                     <Button
                         to="/basket"
+                        color="white"
+                        variant="text"
                         badgeContent={4}
                         types={ButtonType.BUTTON_LINK}
                     >

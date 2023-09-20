@@ -11,6 +11,7 @@ export const App = () => {
         const response = await axios.get(
             'https://appevent.ru/dev/task1/catalog'
         )
+        // console.log(response)
     }
 
     useEffect(() => {
