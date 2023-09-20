@@ -1,4 +1,5 @@
 import { FC } from 'react'
+
 import s from './NotFound.module.scss'
 
 interface NotFoundProps {

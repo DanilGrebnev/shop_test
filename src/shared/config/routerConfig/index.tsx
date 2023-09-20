@@ -1,4 +1,5 @@
 import { type RouteProps } from 'react-router-dom'
+
 import { Basket, Catalog, NotFound } from '@/Pages'
 
 export enum AppRoutes {

@@ -1,12 +1,30 @@
-import { FC } from 'react'
-import s from './HeaderProps.module.scss'
+import { AppBar, Box, Toolbar } from '@mui/material'
 
-interface HeaderProps {
-    className: string
-}
+import { Button, ButtonType } from '@/shared/ui/Link'
 
-export const Header: FC<HeaderProps> = (props) => {
-    const { className } = props
-    
-    return <div className={`${s.HeaderProps} ${className}`}></div>
+export const Header = () => {
+    return (
+        <Box sx={{ flexGrow: 1 }}>
+            <AppBar
+                position="static"
+                sx={{ borderRadius: '10px' }}
+            >
+                <Toolbar>
+                    <Button
+                        to="/"
+                        types={ButtonType.BUTTON_LINK}
+                    >
+                        Каталог
+                    </Button>
+                    <Button
+                        to="/basket"
+                        badgeContent={4}
+                        types={ButtonType.BUTTON_LINK}
+                    >
+                        Корзина
+                    </Button>
+                </Toolbar>
+            </AppBar>
+        </Box>
+    )
 }

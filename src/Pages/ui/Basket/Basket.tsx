@@ -1,6 +1,8 @@
 import { FC } from 'react'
-import s from './Basket.module.scss'
+
 import cn from '@/shared/lib/classnames'
+
+import s from './Basket.module.scss'
 
 interface BasketProps {
     className?: string

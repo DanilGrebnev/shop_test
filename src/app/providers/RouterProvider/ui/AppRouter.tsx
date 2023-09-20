@@ -1,7 +1,8 @@
+import { Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import React, { Suspense } from 'react'
-import { routerConfig } from '@/shared/config/routerConfig'
 import { v4 } from 'uuid'
+
+import { routerConfig } from '@/shared/config/routerConfig'
 
 export const AppRouter = () => {
     return (
@@ -9,12 +10,11 @@ export const AppRouter = () => {
             <Routes>
                 {routerConfig.map(({ element, path }) => {
                     return (
-                        <React.Fragment key={v4()}>
-                            <Route
-                                path={path}
-                                element={element}
-                            />
-                        </React.Fragment>
+                        <Route
+                            key={v4()}
+                            path={path}
+                            element={element}
+                        />
                     )
                 })}
             </Routes>

@@ -1,14 +1,25 @@
-import '@/app/styles/App.scss'
+import { useEffect } from 'react'
+import axios from 'axios'
+
 import { AppRouter } from '@/app/providers/RouterProvider'
-import { NavLink } from 'react-router-dom'
+import { Header } from '@/shared/ui/Header'
+
+import '@/app/styles/App.scss'
 
 export const App = () => {
+    const getDate = async () => {
+        const response = await axios.get(
+            'https://appevent.ru/dev/task1/catalog'
+        )
+    }
+
+    useEffect(() => {
+        getDate()
+    }, [])
+
     return (
-        <div className="App">
-            <header>
-                <NavLink to="/">Каталог</NavLink>
-                <NavLink to="/basket">Корзина</NavLink>
-            </header>
+        <div className="app">
+            <Header />
             <AppRouter />
         </div>
     )

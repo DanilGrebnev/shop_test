@@ -1,6 +1,8 @@
 import { FC } from 'react'
-import s from './Catalog.module.scss'
+
 import cn from '@/shared/lib/classnames'
+
+import s from './Catalog.module.scss'
 
 interface CatalogProps {
     className?: string
