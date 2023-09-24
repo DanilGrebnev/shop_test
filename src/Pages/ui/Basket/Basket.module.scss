@@ -1,0 +1,21 @@
+.Basket {
+    width: 70%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 80% 1fr;
+    height: 100%;
+    gap: 20px;
+}
+
+.BasketCardWrapper {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-rows: 1fr;
+    overflow: auto;
+}
+
+.BasketCardWrapper::-webkit-scrollbar {
+    display: none;
+}

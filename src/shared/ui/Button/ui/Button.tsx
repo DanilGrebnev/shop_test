@@ -44,7 +44,7 @@ export const Button: FC<ButtonProps> = memo((props) => {
             className={cn(s.Button, className)}
         >
             <StyledBadge
-                color="secondary"
+                color='secondary'
                 badgeContent={badgeContent}
             >
                 {children}

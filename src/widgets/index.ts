@@ -1,1 +1,2 @@
-export { ProductCard } from './ui/ProductCart/ProductCart'
+export { BasketCard } from './ui/BasketCard/BasketCard'
+export { TotalAmount } from './ui/TotalAmount/TotalAmount'

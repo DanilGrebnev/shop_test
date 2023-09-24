@@ -18,6 +18,7 @@ module.exports = {
             'warn',
             { allowConstantExport: true },
         ],
+        '@typescript-eslint/no-unused-vars': 'warn',
         // Imports sort
         'simple-import-sort/imports': 'error',
         'simple-import-sort/exports': 'error',

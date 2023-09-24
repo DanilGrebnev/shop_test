@@ -23,8 +23,8 @@ export const ProductCard: FC<ProductCardProps> = (props) => {
             <h3>{name}</h3>
             <h4>Цена: {price}</h4>
             <div className={s.buttons}>
-                <Button variant="outlined">Добавить в корзину</Button>
-                <Button variant="outlined">Подробнее</Button>
+                <Button variant='outlined'>Добавить в корзину</Button>
+                <Button variant='outlined'>Подробнее</Button>
             </div>
         </Card>
     )

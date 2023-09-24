@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 
 import { ErrorBoundary } from '@/app/providers/ErrorBoundary'
+import { StoreProvider } from '@/app/providers/StoreProvider'
 
 import { App } from '../src/app/App.tsx'
 
@@ -16,10 +17,12 @@ const root = ReactDOM.createRoot(document.getElementById('root')!)
 
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <ErrorBoundary>
-                <App />
-            </ErrorBoundary>
-        </BrowserRouter>
-    </React.StrictMode>
+        <StoreProvider>
+            <BrowserRouter>
+                <ErrorBoundary>
+                    <App />
+                </ErrorBoundary>
+            </BrowserRouter>
+        </StoreProvider>
+    </React.StrictMode>,
 )
