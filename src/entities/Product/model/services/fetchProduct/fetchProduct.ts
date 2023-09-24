@@ -7,6 +7,7 @@ export const fetchProduct = createAsyncThunk(
         const response = await axios.get(
             'https://appevent.ru/dev/task1/catalog',
         )
-        return response.data
+
+        return response
     },
 )

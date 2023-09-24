@@ -1,14 +1,13 @@
-import { FC, memo } from 'react'
-import { NavLink } from 'react-router-dom'
 import { Button as ButtonMUI } from '@mui/material'
 import Badge, { BadgeProps } from '@mui/material/Badge'
 import { styled } from '@mui/material/styles'
+import { FC, memo } from 'react'
+import { NavLink } from 'react-router-dom'
 
 import cn from '@/shared/lib/classnames'
 
-import { ButtonProps, ButtonType, LinkWrapperProps } from './ButtonType'
-
 import s from './Button.module.scss'
+import { ButtonProps, ButtonType, LinkWrapperProps } from './ButtonType'
 
 const StyledBadge = styled(Badge)<BadgeProps>(() => ({
     '& .MuiBadge-badge': {
@@ -38,13 +37,13 @@ export const Button: FC<ButtonProps> = memo((props) => {
 
     const DefaultButton = (
         <ButtonMUI
-            {...otherProps}
             variant={variant}
             style={{ color, ...style }}
-            className={cn(s.Button, className)}
+            className={cn(className, s.Button)}
+            {...otherProps}
         >
             <StyledBadge
-                color='secondary'
+                color='success'
                 badgeContent={badgeContent}
             >
                 {children}

@@ -1,17 +1,19 @@
 import { configureStore } from '@reduxjs/toolkit'
 
+import { basketReducer } from '@/entities/Basket'
 import { counterReducer } from '@/entities/Counter'
 import { productReducer } from '@/entities/Product'
 
 import { StateSchema } from './StateSchema'
 
-export const createReduxStore = (initialState?: StateSchema) => {
-    return configureStore<StateSchema>({
-        reducer: {
-            counter: counterReducer,
-            product: productReducer,
-        },
+export const store = configureStore<StateSchema>({
+    reducer: {
+        counter: counterReducer,
+        basket: basketReducer,
+        product: productReducer,
+    },
+})
 
-        preloadedState: initialState,
-    })
+export const createReduxStore = () => {
+    return store
 }

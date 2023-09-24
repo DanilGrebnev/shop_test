@@ -1,21 +1,44 @@
 .Basket {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
-
+    font-size: var(--font-size-l);
     display: grid;
-    grid-template-columns: 80% 1fr;
+    grid-template-columns: 70% 1fr;
     height: 100%;
     gap: 20px;
 }
 
 .BasketCardWrapper {
     width: 100%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    grid-template-rows: 1fr;
+    height: 100%;
     overflow: auto;
 }
 
 .BasketCardWrapper::-webkit-scrollbar {
     display: none;
+}
+
+@media screen and (max-width: 1060px) {
+    .Basket {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        font-size: var(--font-size-m);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .Basket {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        font-size: var(--font-size-s);
+    }
 }

@@ -1,6 +1,7 @@
 import { CSSProperties } from 'react'
 
 export interface ButtonProps {
+    disabled?: boolean
     className?: string
     children?: React.ReactNode
     to?: string

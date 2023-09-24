@@ -19,6 +19,7 @@ module.exports = {
             { allowConstantExport: true },
         ],
         '@typescript-eslint/no-unused-vars': 'warn',
+        
         // Imports sort
         'simple-import-sort/imports': 'error',
         'simple-import-sort/exports': 'error',
@@ -28,26 +29,9 @@ module.exports = {
                 ignoreDeclarationSort: true,
             },
         ],
-        'simple-import-sort/imports': [
-            'error',
-            {
-                groups: [
-                    // Packages `react` related packages come first.
-                    ['^react', '^@?\\w'],
-                    // Internal packages.
-                    ['^(@|components)(/.*|$)'],
-                    // Side effect imports.
-                    ['^\\u0000'],
-                    // Parent imports. Put `..` last.
-                    ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
-                    // Other relative imports. Put same-folder imports and `.` last.
-                    ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-                    // Style imports.
-                    ['^.+\\.?(css)$'],
-                ],
-            },
-        ],
 
         '@typescript-eslint/no-unused-vars': 'warn',
+
+        'react-hooks/exhaustive-deps': 'off',
     },
 }

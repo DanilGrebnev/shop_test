@@ -1,10 +1,11 @@
-import { FC, useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { FC, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { v4 } from 'uuid'
 
-import type { productActions } from '@/entities/Product'
+import { useAppDispatch } from '@/app/providers/StoreProvider'
 import { ProductCard } from '@/entities/Product'
 import { fetchProduct } from '@/entities/Product'
+import { getProductItems } from '@/entities/Product/model/selectors/getProductItems/getProductItems'
 import cn from '@/shared/lib/classnames'
 
 import s from './Catalog.module.scss'
@@ -15,9 +16,15 @@ interface CatalogProps {
 
 export const Catalog: FC<CatalogProps> = (props) => {
     const { className } = props
-    const dispatch = useDispatch()
+
+    const productItems = useSelector(getProductItems)
+
+    const dispatch = useAppDispatch()
 
     const getData = async () => {
+        if (productItems.length) {
+            return
+        }
         dispatch(fetchProduct())
     }
 
@@ -27,14 +34,17 @@ export const Catalog: FC<CatalogProps> = (props) => {
 
     return (
         <div className={cn(s.Catalog, className)}>
-            {/* {state.map((props) => {
+            {productItems?.map((props) => {
                 return (
                     <ProductCard
                         key={v4()}
-                        {...props}
+                        id={props?.id}
+                        image={props?.image}
+                        name={props?.name}
+                        price={props?.price}
                     />
                 )
-            })} */}
+            })}
         </div>
     )
 }

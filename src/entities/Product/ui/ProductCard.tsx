@@ -1,8 +1,9 @@
-import { FC } from 'react'
 import { Card } from '@mui/material/'
+import { FC } from 'react'
 
 import { Button } from '@/shared/ui/Button'
 
+import { AddToBasketButton } from '..'
 import s from './ProductCard.module.scss'
 interface ProductCardProps {
     id: number
@@ -20,10 +21,19 @@ export const ProductCard: FC<ProductCardProps> = (props) => {
                 src={image}
                 className={s.img}
             />
+
             <h3>{name}</h3>
             <h4>Цена: {price}</h4>
+
             <div className={s.buttons}>
-                <Button variant='outlined'>Добавить в корзину</Button>
+                <AddToBasketButton
+                    id={id}
+                    image={image}
+                    name={name}
+                    price={price}
+                    amount={1}
+                />
+
                 <Button variant='outlined'>Подробнее</Button>
             </div>
         </Card>

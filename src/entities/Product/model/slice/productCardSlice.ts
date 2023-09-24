@@ -17,10 +17,17 @@ export const productSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(fetchProduct.fulfilled, (state, action) => {
-                console.log(action.payload)
+                state.isLoading = false
+                state.error = null
+                state.cards = action.payload.data.items
             })
-            .addCase(fetchProduct.pending, (state, action) => {})
-            .addCase(fetchProduct.rejected, (state, action) => {})
+            .addCase(fetchProduct.pending, (state) => {
+                state.isLoading = true
+            })
+            .addCase(fetchProduct.rejected, (state) => {
+                state.isLoading = false
+                state.error = 'Ошибка загрузки данных'
+            })
     },
 })
 

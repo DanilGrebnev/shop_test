@@ -1,5 +1,5 @@
 export interface IProductCard {
-    id: string
+    id: number
     image: string
     name: string
     price: number

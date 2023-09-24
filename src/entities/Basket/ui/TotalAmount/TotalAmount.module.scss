@@ -1,0 +1,16 @@
+.TotalAmount {
+    font-family: roboto;
+    height: max-content;
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.summaryHeader {
+    display: flex;
+    gap: 10px;
+}

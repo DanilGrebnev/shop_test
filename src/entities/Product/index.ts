@@ -1,3 +1,4 @@
+export { AddToBasketButton } from '../Basket/ui/AddToBasketButton/AddToBasketButton'
 export { fetchProduct } from './model/services/fetchProduct/fetchProduct'
 export { productReducer } from './model/slice/productCardSlice'
 export { productActions } from './model/slice/productCardSlice'

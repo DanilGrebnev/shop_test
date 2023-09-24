@@ -1,33 +1,27 @@
 import { FC } from 'react'
+import { useSelector } from 'react-redux'
+import { v4 } from 'uuid'
 
-import cn from '@/shared/lib/classnames'
-import { BasketCard } from '@/widgets'
+import { getBasketItems } from '@/entities/Basket'
+import { BasketCard } from '@/entities/Basket'
 import { TotalAmount } from '@/widgets'
 
 import s from './Basket.module.scss'
-interface BasketProps {
-    className?: string
-}
 
-const Basket: FC<BasketProps> = (props) => {
-    const { className } = props
+const Basket: FC = () => {
+    const basketItem = useSelector(getBasketItems)
 
     return (
-        <div className={cn(s.Basket, className)}>
+        <div className={s.Basket}>
             <div className={s.BasketCardWrapper}>
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
-                <BasketCard />
+                {basketItem.map((propsCard) => {
+                    return (
+                        <BasketCard
+                            key={v4()}
+                            {...propsCard}
+                        />
+                    )
+                })}
             </div>
             <TotalAmount />
         </div>

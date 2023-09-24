@@ -1,7 +1,7 @@
-import { AppRouter } from '@/app/providers/RouterProvider'
-import { Header } from '@/shared/ui/Header'
-
 import '@/app/styles/App.scss'
+
+import { AppRouter } from '@/app/providers/RouterProvider'
+import { Header } from '@/widgets'
 
 export const App = () => {
     return (
