@@ -12,7 +12,7 @@ export const NotFound: FC<NotFoundProps> = (props) => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        navigate('/')
+        navigate('/shop')
     }, [])
 
     return <div className={`${s.NotFound} ${className}`}>Page not found</div>

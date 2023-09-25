@@ -2,6 +2,7 @@ import { AppBar, Box, Toolbar } from '@mui/material'
 import { useSelector } from 'react-redux'
 
 import { getBasketItems } from '@/entities/Basket'
+import { AppPaths } from '@/shared/config/routerConfig'
 import { Button, ButtonType } from '@/shared/ui/Button'
 
 export const Header = () => {
@@ -19,7 +20,7 @@ export const Header = () => {
             >
                 <Toolbar>
                     <Button
-                        to='/'
+                        to={AppPaths.CATALOG}
                         color='white'
                         variant='text'
                         types={ButtonType.BUTTON_LINK}
@@ -27,7 +28,7 @@ export const Header = () => {
                         Каталог
                     </Button>
                     <Button
-                        to='/basket'
+                        to={AppPaths.BASKET}
                         color='white'
                         variant='text'
                         badgeContent={amountProductsInBasket}

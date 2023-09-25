@@ -2,6 +2,7 @@ import { type FC } from 'react'
 import { useSelector } from 'react-redux'
 
 import { useAppDispatch } from '@/app/providers/StoreProvider'
+import { AppPaths } from '@/shared/config/routerConfig'
 import { Button, ButtonType } from '@/shared/ui/Button'
 
 import { getBasketItems } from '../../model/selectors/getBasketItems/getItems'
@@ -36,7 +37,7 @@ export const AddToBasketButton: FC<BasketCardProps> = (props) => {
     const button = inBasket ? (
         <Button
             variant='text'
-            to='/basket'
+            to={AppPaths.BASKET}
             types={ButtonType.BUTTON_LINK}
             style={{ background: 'green', color: 'white' }}
         >
