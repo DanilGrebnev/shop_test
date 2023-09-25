@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
 import { useAppDispatch } from '@/app/providers/StoreProvider'
+import cn from '@/shared/lib/classnames'
 import { Button } from '@/shared/ui/Button'
 
 import { basketActions } from '../../model/slice/basketSlice'
@@ -13,7 +14,7 @@ interface ChangeAmountButtonProps {
 }
 
 export const ChangeAmountButton: FC<ChangeAmountButtonProps> = (props) => {
-    const { amount = 1, id } = props
+    const { amount = 1, id, className } = props
 
     const dispatch = useAppDispatch()
 
@@ -26,7 +27,7 @@ export const ChangeAmountButton: FC<ChangeAmountButtonProps> = (props) => {
     }
 
     return (
-        <div className={s.ButtonContainer}>
+        <div className={cn(s.ButtonContainer, className)}>
             <Button
                 className={s.dec}
                 onClick={decrementAmount}

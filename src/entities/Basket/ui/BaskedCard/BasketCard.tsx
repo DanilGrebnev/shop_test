@@ -18,7 +18,7 @@ export const BasketCard: FC<BasketCardProps> = (props) => {
                 loading='lazy'
                 src={image}
             />
-    
+
             <h2 className={s.productName}>{name}</h2>
             <div className={s.price}>Цена: {price}</div>
             <div className={s.amount}> Количество: {amount} </div>
@@ -26,6 +26,7 @@ export const BasketCard: FC<BasketCardProps> = (props) => {
             <ChangeAmountButton
                 id={id}
                 amount={amount}
+                className={s.changeAmountBtn}
             />
         </Card>
     )

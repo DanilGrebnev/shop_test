@@ -5,7 +5,7 @@ import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 import { ErrorBoundary } from '@/app/providers/ErrorBoundary'
 import { StoreProvider } from '@/app/providers/StoreProvider'

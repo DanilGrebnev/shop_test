@@ -28,3 +28,10 @@
         }
     }
 }
+
+@media screen and (max-width: 450px) {
+    .BasketCard {
+        display: flex;
+        flex-direction: column;
+    }
+}
