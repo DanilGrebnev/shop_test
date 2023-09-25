@@ -28,6 +28,7 @@ npm i or npm install
 ```
 npm start
 ```
+чтобы начать работать, перейдите на http://localhost:5173/shop
 
 ## Создание билда
 
@@ -46,11 +47,19 @@ npm run fix
 ```
 
 ## Структура папок и файлов
-
+- **public/**
+    - **404.html**
 -   **src/**
     -   **app/**
         -   **providers/**
+            - **ErrorBoundary**
+            - **RouteProvider**
+            - **StoreProvider**
         -   **styles/**
+            - **App.scss**
+            - **main.scss**
+            - **reset.scss**
+            - **variables.scss**
         -   **types/**
         -   **variables/**
         -   app.tsx
@@ -59,12 +68,24 @@ npm run fix
         -   **Catalog/**
     -   **pages/**
         -   **ui/**
+            - **Basket**
+            - **Catalog**
+            - **ErrorPage**
+            - **NotFound**
         -   index.ts
     -   **shared/**
-    -   **config/**
-        -   routerConfig
-    -   **lib/**
-    -   **classnames/**
-    -   **getFromLocalStorage/**
-    -   **SetItemInLocalStorage/**
-        ...
+        -   **config/**
+            -   routerConfig
+        -   **lib/**
+            -   **classnames/**
+            -   **getFromLocalStorage/**
+            -   **setItemInLocalStorage/**
+- **.eslint.cjs**
+- **.prettierrc**
+- **index.html**
+- **package-lock.json**
+- **tsconfig.ts**
+- **tsconfig.node.json**
+- **viteconfig.ts**
+
+
