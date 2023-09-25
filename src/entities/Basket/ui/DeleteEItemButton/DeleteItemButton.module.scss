@@ -1,0 +1,15 @@
+$deleteButtonPosition: 10px;
+
+.DeleteItemButton {
+    position: absolute !important;
+    top: $deleteButtonPosition;
+    right: $deleteButtonPosition;
+    width: max-content;
+    height: max-content;
+    padding: 0;
+
+    img {
+        max-width: 25px;
+        max-height: 25px;
+    }
+}

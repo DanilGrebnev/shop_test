@@ -7,6 +7,7 @@
     grid-template-columns: auto 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     overflow: visible !important;
+    position: relative;
 
     img {
         width: 150px;

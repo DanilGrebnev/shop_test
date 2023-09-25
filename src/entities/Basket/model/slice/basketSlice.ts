@@ -25,6 +25,13 @@ export const basketSlice = createSlice({
             setItemInLocalStorage(localStorageKey, state.items)
         },
 
+        deleteProductFromBasket(state, action: PayloadAction<{ id: number }>) {
+            const { id } = action.payload
+
+            state.items = state.items.filter((item) => item.id !== id)
+            setItemInLocalStorage(localStorageKey, state.items)
+        },
+
         incrementAmount(state, action: PayloadAction<{ id: number }>) {
             const { id } = action.payload
 
