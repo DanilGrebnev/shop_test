@@ -3,12 +3,13 @@ import { useSelector } from 'react-redux'
 import { v4 } from 'uuid'
 
 import { useAppDispatch } from '@/app/providers/StoreProvider'
-import { ProductCard } from '@/entities/Product'
-import { fetchProduct } from '@/entities/Product'
-import { getProductItems } from '@/entities/Product/model/selectors/getProductItems/getProductItems'
+import { getCatalogItems } from '@/entities/Catalog'
+import { CatalogCard } from '@/entities/Catalog'
+import { fetchCatalog } from '@/entities/Catalog'
 import cn from '@/shared/lib/classnames'
 
 import s from './Catalog.module.scss'
+import { CatalogLoadingBlock } from './ui/catalogLoadingBlock'
 
 interface CatalogProps {
     className?: string
@@ -17,15 +18,16 @@ interface CatalogProps {
 export const Catalog: FC<CatalogProps> = (props) => {
     const { className } = props
 
-    const productItems = useSelector(getProductItems)
+    const catalogItems = useSelector(getCatalogItems)
 
     const dispatch = useAppDispatch()
 
     const getData = async () => {
-        if (productItems.length) {
+        if (catalogItems.length) {
             return
         }
-        dispatch(fetchProduct())
+
+        dispatch(fetchCatalog())
     }
 
     useEffect(() => {
@@ -34,9 +36,10 @@ export const Catalog: FC<CatalogProps> = (props) => {
 
     return (
         <div className={cn(s.Catalog, className)}>
-            {productItems?.map((props) => {
+            <CatalogLoadingBlock />
+            {catalogItems?.map((props) => {
                 return (
-                    <ProductCard
+                    <CatalogCard
                         key={v4()}
                         id={props?.id}
                         image={props?.image}

@@ -3,10 +3,11 @@ import { Route, Routes } from 'react-router-dom'
 import { v4 } from 'uuid'
 
 import { routerConfig } from '@/shared/config/routerConfig'
+import { CurcularProgress } from '@/shared/ui/CircularProgress'
 
 export const AppRouter = () => {
     return (
-        <Suspense fallback='<h1>Загрузка</h1>'>
+        <Suspense fallback={<CurcularProgress />}>
             <Routes>
                 {routerConfig.map(({ element, path }) => {
                     return (

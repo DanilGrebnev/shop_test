@@ -1,11 +1,9 @@
 import { BasketSchema } from '@/entities/Basket'
-import { CounterSchema } from '@/entities/Counter'
-import { ProductSchema } from '@/entities/Product/model/types/product'
+import { CatalogSchema } from '@/entities/Catalog/model/types/catalog'
 
 export interface StateSchema {
-    counter: CounterSchema
     basket: BasketSchema
 
     // Асинхронные редюсеры
-    product: ProductSchema
+    catalog: CatalogSchema
 }
