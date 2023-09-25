@@ -9,7 +9,7 @@ export enum AppRoutes {
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
-    [AppRoutes.CATALOG]: '/shop',
+    [AppRoutes.CATALOG]: '/',
     [AppRoutes.BASKET]: '/basket',
     [AppRoutes.NOT_FOUND]: '*',
 }

@@ -16,10 +16,10 @@ const root = ReactDOM.createRoot(document.getElementById('root')!)
 
 root.render(
     <StoreProvider>
-        <HashRouter>
+        <BrowserRouter basename='shop'>
             <ErrorBoundary>
                 <App />
             </ErrorBoundary>
-        </HashRouter>
+        </BrowserRouter>
     </StoreProvider>,
 )
