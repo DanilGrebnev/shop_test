@@ -20,7 +20,7 @@ export const BasketCard: FC<BasketCardProps> = (props) => {
             />
 
             <h2 className={s.productName}>{name}</h2>
-            <div className={s.price}>Цена: {price}</div>
+            <div className={s.price}>Цена: {price} ₽</div>
             <div className={s.amount}> Количество: {amount} </div>
 
             <ChangeAmountButton

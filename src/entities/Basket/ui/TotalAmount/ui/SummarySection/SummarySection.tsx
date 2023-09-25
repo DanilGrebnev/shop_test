@@ -13,8 +13,8 @@ export const SummarySection = () => {
 
     return (
         <div className={s.summarySection}>
-            <span>Итого</span>
-            <span className={s.summaryHeaderSum}>{totalSum}</span>
+            <span>Итого:</span>
+            <span className={s.summaryHeaderSum}>{totalSum} ₽</span>
         </div>
     )
 }
