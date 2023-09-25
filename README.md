@@ -1,27 +1,70 @@
-# React + TypeScript + Vite
+<h1 align="center">Hi there, I'm <a href="https://vk.com/danil_sobolev1998" target="_blank">Danil</a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Shop app
 
-Currently, two official plugins are available:
+Тестовый проект
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Технологии
 
-## Expanding the ESLint configuration
+-   React
+-   Redux/Toolkit
+-   TypeScript
+-   Material UI
+-   SCSS
+-   Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Использование
 
-- Configure the top-level `parserOptions` property like this:
+Для работы требуется node.js версии 8+ и выше.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+Откройте корневую папку проекта и выполните команду:
+
+```
+npm i or npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+из той же папки выполните команду:
+
+```
+npm start
+```
+
+## Создание билда
+
+Чтобы выполнить продакшн сборку, выполинте команду:
+
+```
+npm run build
+```
+
+## Форматирование ошибок
+
+чтобы выполнить форматирование ошибок, выполните команду:
+
+```
+npm run fix
+```
+
+## Структура папок и файлов
+
+-   **src/**
+    -   **app/**
+        -   **providers/**
+        -   **styles/**
+        -   **types/**
+        -   **variables/**
+        -   app.tsx
+    -   **entities/**
+        -   **Basket/**
+        -   **Catalog/**
+    -   **pages/**
+        -   **ui/**
+        -   index.ts
+    -   **shared/**
+    -   **config/**
+        -   routerConfig
+    -   **lib/**
+    -   **classnames/**
+    -   **getFromLocalStorage/**
+    -   **SetItemInLocalStorage/**
+        ...
